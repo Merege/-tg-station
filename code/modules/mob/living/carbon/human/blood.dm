@@ -126,7 +126,7 @@ var/const/BLOOD_VOLUME_SURVIVE = 122
 				if(brutedamage > 70)
 					blood_max += 2
 			else if (LI && LI.status == ORGAN_DESTROYED)
-				blood_max += 4	//Removed limbs bleed REALLY bad. Might want to nerf later
+				blood_max += 2.5	//Bleed a bit less
 		if(bleedsuppress)
 			blood_max = 0
 		drip(blood_max)
