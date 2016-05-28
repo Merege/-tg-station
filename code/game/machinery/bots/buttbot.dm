@@ -67,12 +67,12 @@ Here it is: Buttbot.
 	. = ..()
 	if (.)
 		return
-	if(sincelastfart + 10 < world.timeofday)
+	if(sincelastfart + 50 < world.timeofday)
 		say("butt")
 		sincelastfart = world.timeofday
 
 /obj/machinery/bot/buttbot/Hear(message, atom/movable/speaker, var/datum/language/speaking, raw_message, radio_freq)
-	if(prob(buttchance) && !findtext(message,"butt") && (sincelastfart + 10 < world.timeofday))
+	if(prob(buttchance) && !findtext(message,"butt") && (sincelastfart + 50 < world.timeofday))
 		message = strip_html(html_decode(raw_message))
 
 		var/list/split_phrase = splittext(message," ") //Split it up into words.
